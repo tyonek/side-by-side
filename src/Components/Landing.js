@@ -14,7 +14,6 @@ class Landing extends Component {
   }
 
   productSearch = (e) => {
-    console.log('hello world')
     e.preventDefault()
     const {search} = e.target
     const results = {
