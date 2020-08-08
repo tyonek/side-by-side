@@ -9,7 +9,7 @@ class ProductPage extends Component {
     products: []
   }
   componentDidMount() {
-    fetch("http://localhost:8000/api/products")
+    fetch("https://whispering-fjord-48498.herokuapp.com/api/products")
       .then(res => res.json())
       .then(data => this.setState({
         products: data,

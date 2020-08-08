@@ -14,7 +14,7 @@ class PostProduct extends Component {
     description: description.value,
     link: link.value,
   }
-  fetch("http://localhost:8000/api/products", {
+  fetch("https://whispering-fjord-48498.herokuapp.com/api/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",

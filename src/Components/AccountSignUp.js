@@ -31,7 +31,7 @@ class AccountSignUp extends Component {
       username: username.value,
       password: password.value,
     }
-    fetch("http://localhost:8000/api/users", {
+    fetch("https://whispering-fjord-48498.herokuapp.com/api/users", {
       method: "POST",
       headers: {
         "content-type": "application/json"
