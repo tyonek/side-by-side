@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+:root {
+	--font1: 'Baloo Tamma 2', cursive;
+}
+@import url('/src/Images/mert.jpg');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+  overflow-x: hidden;
+  background-color: greenyellow;
+}
+
+.button__account{
+  text-decoration: none;
+  color:blue; 
+  padding: 5px;
+  font-family: var(--font1);
+  font-size: 20px;
+}
+
+.button__account:hover {
+  color: darkred;
+}
+
+.search {
+  font-family: var(--font1);
+  text-align: center;
+  font-size: 24px;
+  padding-top:100px;
+}
+
+input[type=button], [type=text] {
+  width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid blue;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: larger;
+  font-family: var(--font1);
+}
+
+.button{
+  background-color: #4CAF50;
+  color:white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 20px;
+  transition: ease-in 0.5s;
+  cursor: pointer;
+  font-family: var(--font1);
+}
+
+.button:hover{
+  transform: scale(1.05);
+	color: greenyellow;
+	text-align: center;
+  outline: none;
+  background-color: black;
+}
+
+.welcome {
+  font-size: 35px;
+  
+}
