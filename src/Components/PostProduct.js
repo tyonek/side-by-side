@@ -18,7 +18,7 @@ class PostProduct extends Component {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "Authorization": "Bearer " + authToken
+        "Authorization": "Bearer " + localStorage.authToken
       },
       body: JSON.stringify(product)
     })

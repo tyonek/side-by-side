@@ -21,7 +21,7 @@ class AccountSignIn extends Component {
     })
       .then( res => res.json())
       .then(res => {
-        authToken = res.authToken
+        localStorage.authToken = res.authToken
         this.context.setUser(user)
         this.props.history.push('/')
       })
