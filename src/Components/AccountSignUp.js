@@ -11,17 +11,17 @@ class AccountSignUp extends Component {
       value: "",
       touched: false
     },
-}
+  }
 
-// handleSubmit = () => {
-//     const { password, confirmPassword } = this.state;
-//     // perform all neccassary validations
-//     if (password !== confirmPassword) {
-//         alert("Passwords don't match");
-//     } else {
-//         // make API call
-//     }
-// }
+  // handleSubmit = () => {
+  //     const { password, confirmPassword } = this.state;
+  //     // perform all neccassary validations
+  //     if (password !== confirmPassword) {
+  //         alert("Passwords don't match");
+  //     } else {
+  //         // make API call
+  //     }
+  // }
 
   register = (e) => {
     e.preventDefault()
@@ -38,9 +38,15 @@ class AccountSignUp extends Component {
       },
       body: JSON.stringify(user)
     })
+      .then (res => res.json())
       .then(res => {
-        this.context.setUser(user)
-        this.props.history.push('/')
+        if (!res.error) {
+          this.context.setUser(user)
+          this.props.history.push('/')
+        }
+        else (this.setState({
+          error: res.error,
+        }))
       })
   }
 
@@ -55,6 +61,7 @@ class AccountSignUp extends Component {
     }
   }
 
+
   render() {
     const passwordError = this.validatePassword();
     return (
@@ -65,6 +72,7 @@ class AccountSignUp extends Component {
         </header>
 
         <section>
+        <p className="error">{this.state.error}</p>
           <form className='signup-form' onSubmit={this.register}>
             <div>
               <label for="fullname">Your Name</label><br></br>
@@ -79,7 +87,7 @@ class AccountSignUp extends Component {
               <input type="password" name='password' id='password' />
             </div>
             {this.state.password.touched && (
-            <ValidationError message={passwordError} />)}
+              <ValidationError message={passwordError} />)}
             {/* <div>
             <label for="confirmpassword">Confirm Password</label><br></br>
               <input type="password" name='password' id='password' />
