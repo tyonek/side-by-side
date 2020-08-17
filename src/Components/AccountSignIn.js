@@ -7,7 +7,7 @@ class AccountSignIn extends Component {
 
   login = (e) => {
     e.preventDefault()
-    const {username,password} = e.target
+    const {username,password} = e.target;
     const user = {
       username: username.value,
       password: password.value,
@@ -21,9 +21,9 @@ class AccountSignIn extends Component {
     })
       .then( res => res.json())
       .then(res => {
-        localStorage.authToken = res.authToken
-        this.context.setUser(user)
-        this.props.history.push('/')
+        localStorage.authToken = res.authToken;
+        this.context.setUser(user);
+        this.props.history.push('/');
       })
   }
   

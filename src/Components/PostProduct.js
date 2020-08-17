@@ -13,7 +13,8 @@ class PostProduct extends Component {
     price: price.value,
     description: description.value,
     link: link.value,
-  }
+  };
+  
   fetch("https://whispering-fjord-48498.herokuapp.com/api/products", {
       method: "POST",
       headers: {
@@ -26,8 +27,7 @@ class PostProduct extends Component {
         this.context.setProducts(product)
         this.props.history.push ('/')
       })
-
-}
+};
   
   render() {
     return (

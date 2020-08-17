@@ -30,7 +30,7 @@ class AccountSignUp extends Component {
       fullname: fullname.value,
       username: username.value,
       password: password.value,
-    }
+    };
     fetch("https://whispering-fjord-48498.herokuapp.com/api/users", {
       method: "POST",
       headers: {
@@ -41,14 +41,14 @@ class AccountSignUp extends Component {
       .then (res => res.json())
       .then(res => {
         if (!res.error) {
-          this.context.setUser(user)
-          this.props.history.push('/')
+          this.context.setUser(user);
+          this.props.history.push('/');
         }
         else (this.setState({
           error: res.error,
         }))
       })
-  }
+  };
 
   validatePassword() {
     const password = this.state.password.value.trim();
@@ -59,7 +59,7 @@ class AccountSignUp extends Component {
     } else if (!password.match(/[0-9]/)) {
       return "Password must contain one upper case, lower case, number and special character";
     }
-  }
+  };
 
 
   render() {

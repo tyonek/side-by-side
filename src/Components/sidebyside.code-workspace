@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "../../../side-by-side-server/side-by-side-server"
+			"path": "../.."
 		},
 		{
-			"path": "../.."
+			"path": "../../../side-by-side-server"
 		}
 	],
 	"settings": {}

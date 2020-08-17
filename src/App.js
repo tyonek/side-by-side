@@ -16,18 +16,18 @@ class App extends Component {
   state = {
     user: null,
     products: [],
-  }
+  };
 
-  setUser = (user) => { 
+  setUser = (user) => {
     this.setState({
-      user: user
+      user: user,
     })
-  }
-  setProducts = (product) => { 
+  };
+  setProducts = (product) => {
     this.setState({
-      products: [...this.state.products, product] 
+      products: [...this.state.products, product],
     })
-  }
+  };
 
   render() {
     const value = {
@@ -35,19 +35,19 @@ class App extends Component {
       products: this.state.products,
       setUser: this.setUser,
       setProducts: this.setProducts,
-    }
+    };
     return (
       <main className='app'>
         <Context.Provider value={value}>
-        <BrowserRouter>
-          <Link className='header' to='/'><h1 className='header'>SIDE BY SIDE</h1></Link>
-          <Route exact path="/" component={Landing} />
-          <Route path="/accountsignup" component={AccountSignUp} />
-          <Route path="/accountsignin" component={AccountSignIn} />
-          <Route path="/postproduct" component={PostProduct} />
-          <Route path="/productspage" component={ProductsPage} />
-          <Route path="/product/:productId" component={SingleProduct} />
-        </BrowserRouter>
+          <BrowserRouter>
+            <Link className='header' to='/'><h1 className='header'>SIDE BY SIDE</h1></Link>
+            <Route exact path="/" component={Landing} />
+            <Route path="/accountsignup" component={AccountSignUp} />
+            <Route path="/accountsignin" component={AccountSignIn} />
+            <Route path="/postproduct" component={PostProduct} />
+            <Route path="/productspage" component={ProductsPage} />
+            <Route path="/product/:productId" component={SingleProduct} />
+          </BrowserRouter>
         </Context.Provider>
       </main>
     );

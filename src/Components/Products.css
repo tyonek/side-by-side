@@ -16,11 +16,12 @@
   font-family: var(--font1);
   font-size: 24px;
   text-align: center;
-  border: 1px solid black;
+  border: 3px solid black;
   width: 500px;
   padding: 75px;
-  margin: auto;
+  margin: 10px auto;
   border-radius: 8px;
+  
 }
 
 .products {
@@ -37,10 +38,9 @@
 }
 
 .description {
-  color: ;
   font-size: 25px;
 }
 
-.products_list li:nth-child(odd) {
-  color: grey;   
-}
+
+
+

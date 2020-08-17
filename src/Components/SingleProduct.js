@@ -9,37 +9,36 @@ class SingleProduct extends Component {
   state = {
     product: [],
     counter: 0,
-  }
+  };
   incrementcounter = (e) => {
     e.preventDefault()
     this.setState(
-      {counter: this.state.counter +1}
+      { counter: this.state.counter + 1 }
     )
-  }
-    componentDidMount() {
-      fetch("https://whispering-fjord-48498.herokuapp.com/api/products")
-        .then(res => res.json())
-        .then(data => this.setState({
-          products: data,
-          }))
-    }
+  };
+  componentDidMount() {
+    fetch("https://whispering-fjord-48498.herokuapp.com/api/products")
+      .then(res => res.json())
+      .then(data => this.setState({
+        products: data,
+      }))
+  };
 
-  
-    render() {
-      const product = this.context.products.find(p => p.id == this.props.match.params.productId)
-      console.log('hello world')
+
+  render() {
+    const product = this.context.products.find(p => p.id === this.props.match.params.productId);
     return (
       <main>
-  
+
         <section>
           {this.state.product.map(product => (<li>
-          {product.title}
-          {product.price}
-          {product.description}
-          {product.link}
+            {product.title}
+            {product.price}
+            {product.description}
+            {product.link}
           </li>))}
           {this.state.counter}
-          <Button onClick={this.incrementCounter}/>
+          <Button onClick={this.incrementCounter} />
         </section>
 
         {/* <section>

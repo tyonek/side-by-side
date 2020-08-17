@@ -11,7 +11,7 @@ class Landing extends Component {
       value: "",
       touched: false
     }
-  }
+  };
 
   productSearch = (e) => {
     e.preventDefault()
@@ -21,14 +21,14 @@ class Landing extends Component {
     }
     this.context.setProducts(results)
     this.props.history.push('/productspage')
-  }
+  };
 
   validateProductSearch() {
     const productSearch = this.state.productSearch.value.trim();
     if (productSearch.length === 0) {
       return "Must type product";
     }
-  }
+  };
 
   render() {
     const productSearchError = this.validateProductSearch();
@@ -46,7 +46,7 @@ class Landing extends Component {
             <label for="search"></label>
             {/* <input placeholder='Search Product' type="text" name='search' id='search' /><br></br> */}
             <p className="welcome">Welcome to Side by Side, come view the best deals found by people trying to find the best deals, just like YOU!</p>
-            <button type="submit" className="button" id='search'>Search All Products</button>
+            <button type="submit" className="button" id='search'>View All Products</button>
           </div>
           <Link type="button" className="button" to='/postproduct'>Post Product</Link>
         </form>

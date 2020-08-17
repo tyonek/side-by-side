@@ -7,7 +7,8 @@ class ProductPage extends Component {
   static contextType = Context
   state = {
     products: []
-  }
+  };
+  
   componentDidMount() {
     fetch("https://whispering-fjord-48498.herokuapp.com/api/products")
       .then(res => res.json())
@@ -15,7 +16,7 @@ class ProductPage extends Component {
         products: data,
 
       }))
-  }
+  };
 
   render() {
     return (
