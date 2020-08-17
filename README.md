@@ -1,6 +1,8 @@
 # **Side by Side**
 
-Side bySide is a application that allows users to congregate great shopping deals for all products. 
+Side bySide is a application that allows users to congregate to post and view great shopping deals for all products.
+#### Live: https://vercel.com/tyonek/side-by-side/1nmt9ibkk
+#### Back-end Repo: https://github.com/tyonek/side-by-side-server
 ### Technologies
 * Node
 * PostgreSQL
