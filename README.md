@@ -1,4 +1,4 @@
-## **Side by Side**
+# **Side by Side**
 
 
 ## Landing
