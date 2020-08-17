@@ -1,6 +1,11 @@
 # **Side by Side**
 
 Side bySide is a application that allows users to congregate great shopping deals for all products. 
+### Technologies
+* Node
+* PostgreSQL
+* React
+* Express
 
 ## Landing
 User can Sign In, Sign Up, and View Products
@@ -25,6 +30,7 @@ User can sign in if signed up.
 ## Sign Up
 User can sign up for an account to be able to post products.
 ![Image description](https://github.com/tyonek/side-by-side/blob/master/Screenshots/signup.png)
+
 
 # Future Developments
 * Search Products instead of View All to allow a user to search specific products of interest
