@@ -26,7 +26,7 @@ User can sign in if signed up.
 User can sign up for an account to be able to post products.
 ![Image description](https://github.com/tyonek/side-by-side/blob/master/Screenshots/signup.png)
 
-# Future developments
+# Future Developments
 * Search Products instead of View All to allow a user to search specific products of interest
 * Comments section for users to socialize and conversate about products posted
 * Single product page, to view a single product after searched, allowing users access to comments section
