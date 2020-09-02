@@ -11,7 +11,7 @@ class AccountSignUp extends Component {
       value: "",
       touched: false
     },
-  }
+  };
 
   // handleSubmit = () => {
   //     const { password, confirmPassword } = this.state;
@@ -100,6 +100,6 @@ class AccountSignUp extends Component {
     );
   }
 
-}
+};
 
 export default AccountSignUp;

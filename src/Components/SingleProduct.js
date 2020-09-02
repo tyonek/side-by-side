@@ -54,6 +54,6 @@ class SingleProduct extends Component {
       </main>
     );
   }
-}
+};
 
 export default SingleProduct;

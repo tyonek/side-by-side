@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, BrowserRouter } from 'react-router-dom'
 import Context from '../Context'
 import './landing.css'
 
@@ -34,6 +34,7 @@ class Landing extends Component {
     const productSearchError = this.validateProductSearch();
     return (
       <main>
+        <BrowserRouter>
         {this.context.user ? (<>
           <button onClick={e => this.context.setUser(null)}>Logout</button>
         </>) : (<>
@@ -50,9 +51,11 @@ class Landing extends Component {
           </div>
           <Link type="button" className="button" to='/postproduct'>Post Product</Link>
         </form>
+        </BrowserRouter>
+        
       </main>
     );
   }
-}
+};
 
 export default Landing;

@@ -3,7 +3,7 @@ import Context from '../Context';
 import { Link } from 'react-router-dom';
 import './Products.css'
 
-class ProductPage extends Component {
+class ProductsPage extends Component {
   static contextType = Context
   state = {
     products: []
@@ -22,6 +22,12 @@ class ProductPage extends Component {
     return (
       <main>
         <section >
+        {this.context.user ? (<>
+          <button onClick={e => this.context.setUser(null)}>Logout</button>
+        </>) : (<>
+          <Link className="button__account" to='/accountsignin'>Sign In</Link>
+          <Link className="button__account" to='/accountsignup'>Sign Up</Link>
+        </>)}
           {this.state.products.map(product => (<li className="products_list">
             {/* <Link className="products" to={"/product/" + product.id}>{product.title}</Link> */}
             <a className="products" target= "_blank" href={"https://www." + product.link}>{product.title}</a>
@@ -33,6 +39,6 @@ class ProductPage extends Component {
     );
   }
 
-}
+};
 
-export default ProductPage;
+export default ProductsPage;

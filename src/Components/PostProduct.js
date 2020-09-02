@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Context from '../Context'
+import { Link } from 'react-router-dom'
 
 
 class PostProduct extends Component {
@@ -32,6 +33,12 @@ class PostProduct extends Component {
   render() {
     return (
       <main>
+        {this.context.user ? (<>
+          <button onClick={e => this.context.setUser(null)}>Logout</button>
+        </>) : (<>
+          <Link className="button__account" to='/accountsignin'>Sign In</Link>
+          <Link className="button__account" to='/accountsignup'>Sign Up</Link>
+        </>)}
         <header className="banner">
           <h3>Did you find the deal of the day? Help everyone save!</h3>
         </header>
@@ -59,6 +66,6 @@ class PostProduct extends Component {
       </main>
     );
   }
-}
+};
 
 export default PostProduct;

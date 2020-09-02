@@ -11,7 +11,7 @@ class AccountSignIn extends Component {
     const user = {
       username: username.value,
       password: password.value,
-    }
+    };
     fetch("https://whispering-fjord-48498.herokuapp.com/api/auth/login", {
       method: "POST",
       headers: {
@@ -25,7 +25,7 @@ class AccountSignIn extends Component {
         this.context.setUser(user);
         this.props.history.push('/');
       })
-  }
+  };
   
   render() {
     return (
@@ -45,6 +45,7 @@ class AccountSignIn extends Component {
               <label for="password">Password</label><br></br>
               <input type="password" name='password' id='password' />
             </div>
+            <div><p>EMAIL: admin@gmail.com | PASSWORD: Pa$$Word123</p></div>
             <button type='submit'>Sign In</button>
           </form>
         </section>
@@ -53,6 +54,6 @@ class AccountSignIn extends Component {
       </main>
     );
   }
-}
+};
 
 export default AccountSignIn;
