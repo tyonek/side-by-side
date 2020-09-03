@@ -34,7 +34,7 @@ class Landing extends Component {
     const productSearchError = this.validateProductSearch();
     return (
       <main>
-        <BrowserRouter>
+        
         {this.context.user ? (<>
           <button onClick={e => this.context.setUser(null)}>Logout</button>
         </>) : (<>
@@ -51,7 +51,7 @@ class Landing extends Component {
           </div>
           <Link type="button" className="button" to='/postproduct'>Post Product</Link>
         </form>
-        </BrowserRouter>
+        
         
       </main>
     );

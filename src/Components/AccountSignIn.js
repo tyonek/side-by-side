@@ -45,8 +45,8 @@ class AccountSignIn extends Component {
               <label for="password">Password</label><br></br>
               <input type="password" name='password' id='password' />
             </div>
-            <div><p>EMAIL: admin@gmail.com | PASSWORD: Pa$$Word123</p></div>
             <button type='submit'>Sign In</button>
+            <div><p>To Test Use</p><br></br><p>EMAIL: admin@gmail.com | PASSWORD: Pa$$Word123</p></div>
           </form>
         </section>
 
