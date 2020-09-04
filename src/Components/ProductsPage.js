@@ -30,7 +30,7 @@ class ProductsPage extends Component {
         </>)}
           {this.state.products.map(product => (<li className="products_list">
             {/* <Link className="products" to={"/product/" + product.id}>{product.title}</Link> */}
-            <a className="products" target= "_blank" href={"https://www." + product.link}>{product.title}</a>
+            <a className="products" target= "_blank" href={product.link}>{product.title}</a>
             <p className="price">${product.price}</p>
             <p className="description">{product.description}</p>
           </li>))}
