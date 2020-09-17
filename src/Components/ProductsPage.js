@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Context from '../Context';
 import { Link } from 'react-router-dom';
-import './Products.css'
+import './Products.css';
 
 class ProductsPage extends Component {
   static contextType = Context
@@ -29,8 +29,7 @@ class ProductsPage extends Component {
           <Link className="button__account" to='/accountsignup'>Sign Up</Link>
         </>)}
           {this.state.products.map(product => (<li className="products_list">
-            {/* <Link className="products" to={"/product/" + product.id}>{product.title}</Link> */}
-            <a className="products" target= "_blank" href={product.link}>{product.title}</a>
+            <a className="products" target= "_blank"  rel="noopener noreferrer" href={product.link}>{product.title}</a>
             <p className="price">${product.price}</p>
             <p className="description">{product.description}</p>
           </li>))}

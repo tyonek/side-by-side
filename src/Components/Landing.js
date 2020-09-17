@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link, BrowserRouter } from 'react-router-dom'
-import Context from '../Context'
-import './landing.css'
+import { Link } from 'react-router-dom';
+import Context from '../Context';
+import './landing.css';
 
 class Landing extends Component {
   static contextType = Context
@@ -31,7 +31,6 @@ class Landing extends Component {
   };
 
   render() {
-    const productSearchError = this.validateProductSearch();
     return (
       <main>
         
@@ -45,7 +44,6 @@ class Landing extends Component {
         <form className="search" onSubmit={this.productSearch}>
           <div>
             <label for="search"></label>
-            {/* <input placeholder='Search Product' type="text" name='search' id='search' /><br></br> */}
             <p className="welcome">Welcome to Side by Side, come view the best deals found by people trying to find the best deals, just like YOU!</p>
             <button type="submit" className="button" id='search'>View All Products</button>
           </div>

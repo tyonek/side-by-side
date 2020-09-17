@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Context from '../Context';
-import Button from './Button'
+import Button from './Button';
 
 
 
@@ -26,7 +26,6 @@ class SingleProduct extends Component {
 
 
   render() {
-    const product = this.context.products.find(p => p.id === this.props.match.params.productId);
     return (
       <main>
 
@@ -40,16 +39,6 @@ class SingleProduct extends Component {
           {this.state.counter}
           <Button onClick={this.incrementCounter} />
         </section>
-
-        {/* <section>
-          <form class="search">
-            <div>
-              <label for="comment">Comment</label>
-              <textarea name='comment' rows="15" required></textarea>
-              <button type='submit'>Submit</button>
-            </div>
-          </form>
-        </section> */}
 
       </main>
     );

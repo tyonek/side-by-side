@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Context from '../Context'
-import { Link } from 'react-router-dom'
+import Context from '../Context';
+import { Link } from 'react-router-dom';
+
 
 
 class PostProduct extends Component {
@@ -29,7 +30,7 @@ class PostProduct extends Component {
         this.props.history.push ('/')
       })
 };
-  
+
   render() {
     return (
       <main>

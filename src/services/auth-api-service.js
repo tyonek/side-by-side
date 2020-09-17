@@ -1,6 +1,6 @@
-import config from '../config'
-import TokenService from './token-service'
-import IdleService from './idle-service'
+import config from '../../src/config';
+import TokenService from './token-service';
+import IdleService from './idle-service';
 
 const AuthApiService = {
   postUser(user) {
@@ -70,7 +70,6 @@ const AuthApiService = {
         return res
       })
       .catch(err => {
-        console.log('refresh token request error')
         console.error(err)
       })
   },

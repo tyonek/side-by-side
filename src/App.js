@@ -9,12 +9,15 @@ import PostProduct from './Components/PostProduct';
 import ProductsPage from './Components/ProductsPage';
 import SingleProduct from './Components/SingleProduct';
 import Context from './Context';
+import TokenServices from './services/token-service';
+
+
 import './App.css';
 
 
 class App extends Component {
   state = {
-    user: null,
+    user: '',
     products: [],
   };
 
@@ -28,6 +31,13 @@ class App extends Component {
       products: [...this.state.products, product],
     })
   };
+
+  componentDidMount() {
+    const authToken = TokenServices.getAuthToken();
+    if (authToken) {
+      this.setState({ user: true });
+    }
+  }
 
   render() {
     const value = {

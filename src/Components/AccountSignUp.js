@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Context from '../Context'
-import './Account.css'
-import ValidationError from './ValidationError'
+import Context from '../Context';
+import './Account.css';
+import ValidationError from './ValidationError';
 
 class AccountSignUp extends Component {
   static contextType = Context
@@ -12,16 +12,6 @@ class AccountSignUp extends Component {
       touched: false
     },
   };
-
-  // handleSubmit = () => {
-  //     const { password, confirmPassword } = this.state;
-  //     // perform all neccassary validations
-  //     if (password !== confirmPassword) {
-  //         alert("Passwords don't match");
-  //     } else {
-  //         // make API call
-  //     }
-  // }
 
   register = (e) => {
     e.preventDefault()
@@ -88,10 +78,6 @@ class AccountSignUp extends Component {
             </div>
             {this.state.password.touched && (
               <ValidationError message={passwordError} />)}
-            {/* <div>
-            <label for="confirmpassword">Confirm Password</label><br></br>
-              <input type="password" name='password' id='password' />
-            </div> */}
             <button type='submit'>Sign Up</button>
           </form>
         </section>

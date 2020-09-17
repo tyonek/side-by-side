@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import Context from '../Context';
-import './Account.css'
+import './Account.css';
+import TokenService from '../services/token-service';
 
 class AccountSignIn extends Component {
   static contextType = Context
+  state = {
+    error : null,
+  }
 
   login = (e) => {
     e.preventDefault()
@@ -21,7 +25,13 @@ class AccountSignIn extends Component {
     })
       .then( res => res.json())
       .then(res => {
-        localStorage.authToken = res.authToken;
+        if (res.error) {
+          this.setState({
+            error: "Login Failed."
+          })
+          return
+        }
+        TokenService.saveAuthToken(res.authToken);
         this.context.setUser(user);
         this.props.history.push('/');
       })
@@ -48,6 +58,7 @@ class AccountSignIn extends Component {
             <button type='submit'>Sign In</button>
             <div><p>To Test Use</p><p>EMAIL: admin@gmail.com | PASSWORD: Pa$$Word123</p></div>
           </form>
+          {this.state.error}
         </section>
 
 
