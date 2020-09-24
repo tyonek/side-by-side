@@ -4,7 +4,7 @@ import './Account.css';
 import ValidationError from './ValidationError';
 
 class AccountSignUp extends Component {
-  static contextType = Context
+  static contextType = Context;
 
   state = {
     password: {
@@ -14,8 +14,8 @@ class AccountSignUp extends Component {
   };
 
   register = (e) => {
-    e.preventDefault()
-    const { fullname, username, password } = e.target
+    e.preventDefault();
+    const { fullname, username, password } = e.target;
     const user = {
       fullname: fullname.value,
       username: username.value,
@@ -36,8 +36,8 @@ class AccountSignUp extends Component {
         }
         else (this.setState({
           error: res.error,
-        }))
-      })
+        }));
+      });
   };
 
   validatePassword() {
@@ -48,7 +48,7 @@ class AccountSignUp extends Component {
       return "Password must be between 6 and 72 characters long";
     } else if (!password.match(/[0-9]/)) {
       return "Password must contain one upper case, lower case, number and special character";
-    }
+    };
   };
 
 

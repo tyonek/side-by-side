@@ -4,13 +4,13 @@ import './Account.css';
 import TokenService from '../services/token-service';
 
 class AccountSignIn extends Component {
-  static contextType = Context
+  static contextType = Context;
   state = {
     error : null,
-  }
+  };
 
   login = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const {username,password} = e.target;
     const user = {
       username: username.value,
@@ -29,12 +29,12 @@ class AccountSignIn extends Component {
           this.setState({
             error: "Login Failed."
           })
-          return
-        }
+          return;
+        };
         TokenService.saveAuthToken(res.authToken);
         this.context.setUser(user);
         this.props.history.push('/');
-      })
+      });
   };
   
   render() {

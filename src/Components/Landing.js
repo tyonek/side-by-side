@@ -4,7 +4,7 @@ import Context from '../Context';
 import './landing.css';
 
 class Landing extends Component {
-  static contextType = Context
+  static contextType = Context;
 
   state = {
     productSearch: {
@@ -15,19 +15,19 @@ class Landing extends Component {
 
   productSearch = (e) => {
     e.preventDefault()
-    const {search} = e.target
+    const {search} = e.target;
     const results = {
       title: search.value,
-    }
-    this.context.setProducts(results)
-    this.props.history.push('/productspage')
+    };
+    this.context.setProducts(results);
+    this.props.history.push('/productspage');
   };
 
   validateProductSearch() {
     const productSearch = this.state.productSearch.value.trim();
     if (productSearch.length === 0) {
       return "Must type product";
-    }
+    };
   };
 
   render() {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Products.css';
 
 class ProductsPage extends Component {
-  static contextType = Context
+  static contextType = Context;
   state = {
     products: []
   };
@@ -15,7 +15,7 @@ class ProductsPage extends Component {
       .then(data => this.setState({
         products: data,
 
-      }))
+      }));
   };
 
   render() {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Context from '../Context';
 import { Link } from 'react-router-dom';
+import TokenService from '../services/token-service'
 
 
 
@@ -8,8 +9,8 @@ class PostProduct extends Component {
   static contextType = Context
 
   postProduct = (e) => {
-  e.preventDefault()
-  const {title, price, description,link} = e.target
+  e.preventDefault();
+  const {title, price, description,link} = e.target;
   const product = {
     title: title.value,
     price: price.value,
@@ -21,14 +22,14 @@ class PostProduct extends Component {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "Authorization": "Bearer " + localStorage.authToken
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify(product)
     })
       .then(res => {
-        this.context.setProducts(product)
-        this.props.history.push ('/')
-      })
+        this.context.setProducts(product);
+        this.props.history.push ('/');
+      });
 };
 
   render() {

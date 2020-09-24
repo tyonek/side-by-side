@@ -5,13 +5,13 @@ import Button from './Button';
 
 
 class SingleProduct extends Component {
-  static contextType = Context
+  static contextType = Context;
   state = {
     product: [],
     counter: 0,
   };
   incrementcounter = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     this.setState(
       { counter: this.state.counter + 1 }
     )

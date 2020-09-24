@@ -5,6 +5,7 @@ const ProductApiService = {
   getProducts() {
     return fetch(`${config.API_ENDPOINT}/products`, {
       headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(res =>
