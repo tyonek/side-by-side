@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Context from '../Context';
 import { Link } from 'react-router-dom';
-import TokenService from '../services/token-service'
+import TokenService from '../services/token-service';
 
 
 
@@ -56,7 +56,7 @@ class PostProduct extends Component {
             </div>
             <div>
               <label for='description'>Description</label><br></br>
-              <textarea name='description' rows="15" cols="60" required></textarea>
+              <textarea name='description' rows="15" cols="60" id='description' required></textarea>
             </div>
             <div>
               <label for='link'>Link</label><br></br>
