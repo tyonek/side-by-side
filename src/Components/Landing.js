@@ -41,13 +41,13 @@ class Landing extends Component {
           <Link className="button__account" to='/accountsignup'>Sign Up</Link>
         </>)}
 
-        <div className="search" onSubmit={this.productSearch}>
+        <form className="search" onSubmit={this.productSearch}>
           <div>
             <p className="welcome">Welcome to Side by Side, come view the best deals found by people trying to find the best deals, just like YOU!</p>
             <button type="submit" className="button" id='search'>View All Products</button>
           </div>
           <Link type="button" className="button" to='/postproduct'>Post Product</Link>
-        </div>
+        </form>
         
         
       </main>
