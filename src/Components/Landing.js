@@ -15,7 +15,7 @@ class Landing extends Component {
 
   productSearch = (e) => {
     e.preventDefault()
-    const {search} = e.target;
+    const { search } = e.target;
     const results = {
       title: search.value,
     };
@@ -33,7 +33,7 @@ class Landing extends Component {
   render() {
     return (
       <main>
-        
+
         {this.context.user ? (<>
           <button onClick={e => this.context.setUser(null)}>Logout</button>
         </>) : (<>
@@ -46,10 +46,13 @@ class Landing extends Component {
             <p className="welcome">Welcome to Side by Side, come view the best deals found by people trying to find the best deals, just like YOU!</p>
             <button type="submit" className="button" id='search'>View All Products</button>
           </div>
-          <Link type="button" className="button" to='/postproduct'>Post Product</Link>
+          {this.context.user ? (<> <Link type="button" className="button" to='/postproduct'>Post Product</Link>
+          </>) : (<>
+            <p className="to__view">Login to Post Products</p>
+          </>)}
         </form>
-        
-        
+
+
       </main>
     );
   }
